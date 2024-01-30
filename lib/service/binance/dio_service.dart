@@ -50,7 +50,6 @@ class DioService extends IDioService {
     } on DioError catch (e) {
       log("Error Message: $e");
     }
-
     throw UnimplementedError();
   }
 

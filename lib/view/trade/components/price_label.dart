@@ -1,4 +1,3 @@
-
 part of 'package:crypto_app/view/trade/trade_view.dart';
 
 class _PriceLabel extends StatelessWidget {

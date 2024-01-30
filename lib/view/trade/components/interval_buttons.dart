@@ -3,7 +3,6 @@ part of 'package:crypto_app/view/trade/trade_view.dart';
 class _IntervalButtons extends StatelessWidget {
   const _IntervalButtons({required this.tradeViewModel});
   final TradeViewModel tradeViewModel;
-
   @override
   Widget build(BuildContext context) {
     return Padding(

@@ -4,7 +4,6 @@ class _InfoBody extends StatelessWidget {
   const _InfoBody({required this.candle});
 
   final List<Candle> candle;
-
   @override
   Widget build(BuildContext context) {
     return Padding(

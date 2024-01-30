@@ -24,7 +24,6 @@ class DummyNewsData {
     "Binance Sees Over \$3 Billion in Customer Withdrawals in 24 Hours - Here's What's Happening...",
     "New FTX CEO Says 'Unacceptable Practices' by 'Inexperienced and Unsophisticated Individuals' Led to FTX Collapse - Here's What Happened...",
   ];
-
   static List<String> newsUrls = [
     "https://cryptonews.com/news/bitcoin-price-prediction-as-bears-take-control-how-low-can-btc-go.htm",
     "https://cryptonews.com/news/legendary-the-big-short-investor-michael-burry-believes-binance-crypto-exchange-audit-meaningless-heres-why.htm",

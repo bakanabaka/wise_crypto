@@ -3,7 +3,6 @@ part of 'package:crypto_app/view/trade/trade_view.dart';
 class _AppBar extends StatelessWidget {
   const _AppBar({required this.symbol});
   final String symbol;
-
   @override
   Widget build(BuildContext context) {
     return Padding(

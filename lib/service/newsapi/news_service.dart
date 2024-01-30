@@ -16,7 +16,6 @@ class NewsService extends INewsService {
   Future getNews() async {
     try {
       final response = await _dio.get(_pathNews);
-
       if (response.statusCode == HttpStatus.ok) {
         return response.data;
       } else {

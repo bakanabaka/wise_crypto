@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
 class OnBoardingView1 extends StatefulWidget {
-  const OnBoardingView1({super.key});
+  const OnBoardingView1({Key? key}) : super(key: key);
 
   @override
   State<OnBoardingView1> createState() => _OnBoardingView1State();
@@ -17,7 +17,9 @@ class _OnBoardingView1State extends State<OnBoardingView1>
   @override
   void initState() {
     _animationController = AnimationController(
-        vsync: this, duration: DurationConstants.lottieLow());
+      vsync: this,
+      duration: DurationConstants.lottieLow(),
+    );
     super.initState();
   }
 
@@ -29,35 +31,37 @@ class _OnBoardingView1State extends State<OnBoardingView1>
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 150),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          LottieBuilder.asset(
-            LottieEnum.onboard1.lottiePath,
-            fit: BoxFit.cover,
-            repeat: true,
-            animate: true,
-            controller: _animationController,
-            onLoaded: (p0) {
-              _animationController.forward();
-              _animationController.repeat();
-            },
-          ),
-          const Text("Build your future",
-              style: onBoardTitle),
-          const SizedBox(
-            height: 10,
-          ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10),
-            child: Text(
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.only(bottom: 150),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            LottieBuilder.asset(
+              LottieEnum.onboard1.lottiePath,
+              fit: BoxFit.cover,
+              repeat: true,
+              animate: true,
+              controller: _animationController,
+              onLoaded: (p0) {
+                _animationController.forward();
+                _animationController.repeat();
+              },
+            ),
+            const Text("Build your future", style: onBoardTitle),
+            const SizedBox(
+              height: 10,
+            ),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10),
+              child: Text(
                 "Start investing today and your future will change for the better.",
                 style: onBoardDescription,
-                textAlign: TextAlign.center),
-          ),
-        ],
+                textAlign: TextAlign.center,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -132,21 +132,33 @@ class _TradeButtons extends StatelessWidget {
                               for (var element in walletViewModel.appWallet) {
                                 if (element.symbol == symbol &&
                                     element.amount > 0 &&
-                                    element.price > 0) {
+                                    element.price > 0 &&
+                                    double.parse(tradeViewModel
+                                                .controller.text) /
+                                            (double.parse(
+                                                market[index].lastPrice)) <
+                                        element.amount) {
                                   element.amount -= double.parse(
-                                      tradeViewModel.controller.text);
-                                  element.price -= (element.amount *
-                                      double.parse(market[index].lastPrice));
+                                          tradeViewModel.controller.text) /
+                                      (double.parse(market[index].lastPrice));
+                                  // element.price -= double.parse(
+                                  //     tradeViewModel.controller.text);
+                                  Navigator.pop(context);
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                      const SnackBar(
+                                          content:
+                                              Text("Transaction Success")));
+                                } else {
+                                  Navigator.pop(context);
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                      const SnackBar(
+                                          content:
+                                              Text("Transaction Failure")));
                                 }
-                                aa -= element.price;
+                                // aa -= element.price;
                               }
 
                               walletViewModel.changeTotalBalance(aa);
-
-                              Navigator.pop(context);
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(
-                                      content: Text("Transaction Success")));
                             },
                             child: Container(
                               height: 60,
@@ -254,11 +266,11 @@ class _TradeButtons extends StatelessWidget {
                                   }
                                 }
                               }
-                              num aa = 0;
-                              for (var e in walletViewModel.appWallet) {
-                                aa += e.price;
-                              }
-                              walletViewModel.changeTotalBalance(aa);
+                              // num aa = 0;
+                              // for (var e in walletViewModel.appWallet) {
+                              //   aa += e.price;
+                              // }
+                              // walletViewModel.changeTotalBalance(aa);
                               Navigator.pop(context);
                               ScaffoldMessenger.of(context).showSnackBar(
                                   const SnackBar(

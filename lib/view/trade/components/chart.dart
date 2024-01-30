@@ -4,7 +4,6 @@ class _Chart extends StatelessWidget {
   const _Chart({required this.tradeViewModel, required this.candle});
   final TradeViewModel tradeViewModel;
   final List<Candle> candle;
-
   @override
   Widget build(BuildContext context) {
     return SizedBox(

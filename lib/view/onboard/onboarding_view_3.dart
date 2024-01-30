@@ -30,36 +30,40 @@ class _OnBoardingView3State extends State<OnBoardingView3>
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 150),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          LottieBuilder.asset(
-            LottieEnum.onboard3.lottiePath,
-            fit: BoxFit.cover,
-            animate: true,
-            repeat: true,
-            controller: _animationController,
-            onLoaded: (p0) {
-              _animationController.forward();
-              _animationController.repeat();
-            },
-          ),
-          const Text(
-            "Realtime Data",
-            style: onBoardTitle,
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10),
-            child: Text("Track your cryptocurrency portfolio in realtime.",
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.only(bottom: 150),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            LottieBuilder.asset(
+              LottieEnum.onboard3.lottiePath,
+              fit: BoxFit.cover,
+              animate: true,
+              repeat: true,
+              controller: _animationController,
+              onLoaded: (p0) {
+                _animationController.forward();
+                _animationController.repeat();
+              },
+            ),
+            const Text(
+              "Realtime Data",
+              style: onBoardTitle,
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10),
+              child: Text(
+                "Track your cryptocurrency portfolio in realtime.",
                 style: onBoardDescription,
-                textAlign: TextAlign.center),
-          ),
-        ],
+                textAlign: TextAlign.center,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

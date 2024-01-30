@@ -1,6 +1,6 @@
 part of 'package:crypto_app/view/market/market_view.dart';
 
-class _AppBar extends StatelessWidget with PreferredSizeWidget {
+class _AppBar extends StatelessWidget implements PreferredSizeWidget {
   const _AppBar();
 
   @override
@@ -8,7 +8,7 @@ class _AppBar extends StatelessWidget with PreferredSizeWidget {
     return AppBar(
       automaticallyImplyLeading: false,
       title: GradientText(
-        "cryptofi",
+        "WiseCrypto",
         colors: [
           Colors.white,
           Colors.greenAccent,

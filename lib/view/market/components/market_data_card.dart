@@ -1,20 +1,24 @@
 part of 'package:crypto_app/view/market/market_view.dart';
 
 class _MarketDataCard extends StatelessWidget {
-  const _MarketDataCard({required this.marketViewModel, required this.index, required this.coins});
+  const _MarketDataCard({
+    required this.marketViewModel,
+    required this.index,
+    required this.coins,
+  });
+
   final MarketViewModel marketViewModel;
   final int index;
   final List<Market> coins;
 
   @override
   Widget build(BuildContext context) {
-    final bool isMinus = coins[index]
-                                  .priceChangePercent
-                                  .startsWith('-');
+    final bool isMinus = coins[index].priceChangePercent.startsWith('-');
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15),
       child: InkWell(
         onTap: () {
+          // Replace this line with the actual logic for Bybit API navigation
           marketViewModel.navigateToTradeView(
               context, index, coins[index].symbol);
         },
@@ -25,9 +29,10 @@ class _MarketDataCard extends StatelessWidget {
             title: Text(
               coins[index].symbol.toString().replaceAll("USDT", ""),
               style: const TextStyle(
-                  fontWeight: FontWeight.w600,
-                  color: Colors.white,
-                  fontSize: 18),
+                fontWeight: FontWeight.w600,
+                color: Colors.white,
+                fontSize: 18,
+              ),
             ),
             trailing: Row(
               mainAxisSize: MainAxisSize.min,
@@ -47,19 +52,20 @@ class _MarketDataCard extends StatelessWidget {
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Center(
-                      child: isMinus
-                          ? Text(
-                              coins[index].priceChangePercent,
-                              style: const TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold),
-                            )
-                          : Text(
-                              '+${coins[index].priceChangePercent}',
-                              style: const TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold),
-                            )),
+                    child: isMinus
+                        ? Text(
+                            coins[index].priceChangePercent,
+                            style: const TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
+                          )
+                        : Text(
+                            '+${coins[index].priceChangePercent}',
+                            style: const TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
+                          ),
+                  ),
                 )
               ],
             ),
@@ -68,7 +74,8 @@ class _MarketDataCard extends StatelessWidget {
                     height: 30,
                     width: 30,
                     child:
-                        Image.asset('assets/logo/${coins[index].symbol}.png'))
+                        Image.asset('assets/logo/${coins[index].symbol}.png'),
+                  )
                 : SizedBox(
                     height: 30,
                     width: 30,
