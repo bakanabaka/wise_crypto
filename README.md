@@ -34,7 +34,7 @@ Complete Flutter Application with Provider + Dio for API REST. (Binance API)
 
 Download project
 ```bash
-git clone https://github.com/uemirhanselim/Crypto-App.git
+git clone https://github.com/bakanabaka/wise_crypto
 ```
 
 Get flutter dependencies
