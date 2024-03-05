@@ -15,7 +15,7 @@ void main() async {
     print("Firebase connected successfully!");
   } on FirebaseException catch (e) {
     // Handle Firebase initialization error
-    print("Firebase initialization error: ");
+    print("Firebase initialization error:");
   }
   runApp(
     MultiProvider(
