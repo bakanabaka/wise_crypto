@@ -52,8 +52,10 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                     )),
 
                 onBoardingViewModel.onLastPage
-                    ? OnBoardingButton(onTap: () => onBoardingViewModel.navigateToHome(context), label: "Start trading")
-                    : OnBoardingButton(onTap: () => onBoardingViewModel.nextPage(), label: "Next"),
+                    ? const SizedBox.shrink()
+                    : OnBoardingButton(
+                        onTap: () => onBoardingViewModel.nextPage(),
+                        label: "Next"),
               ],
             ),
           ),

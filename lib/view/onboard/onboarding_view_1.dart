@@ -38,7 +38,7 @@ class _OnBoardingView1State extends State<OnBoardingView1>
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             LottieBuilder.asset(
-              LottieEnum.onboard1.lottiePath,
+              LottieEnum.onboard3.lottiePath,
               fit: BoxFit.cover,
               repeat: true,
               animate: true,

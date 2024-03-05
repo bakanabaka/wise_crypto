@@ -2,6 +2,12 @@
   "configVersion": 2,
   "packages": [
     {
+      "name": "_flutterfire_internals",
+      "rootUri": "file:///C:/Users/shrav/AppData/Local/Pub/Cache/hosted/pub.dev/_flutterfire_internals-1.3.23",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
       "name": "archive",
       "rootUri": "file:///C:/Users/shrav/AppData/Local/Pub/Cache/hosted/pub.dev/archive-3.4.9",
       "packageUri": "lib/",
@@ -84,6 +90,42 @@
       "rootUri": "file:///C:/Users/shrav/AppData/Local/Pub/Cache/hosted/pub.dev/file-7.0.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
+    },
+    {
+      "name": "firebase_auth",
+      "rootUri": "file:///C:/Users/shrav/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth-4.17.6",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "firebase_auth_platform_interface",
+      "rootUri": "file:///C:/Users/shrav/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth_platform_interface-7.1.6",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "firebase_auth_web",
+      "rootUri": "file:///C:/Users/shrav/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth_web-5.9.6",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
+      "name": "firebase_core",
+      "rootUri": "file:///C:/Users/shrav/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_core-2.25.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "firebase_core_platform_interface",
+      "rootUri": "file:///C:/Users/shrav/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_core_platform_interface-5.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "firebase_core_web",
+      "rootUri": "file:///C:/Users/shrav/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_core_web-2.11.5",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
     },
     {
       "name": "flutter",
@@ -416,7 +458,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-12-31T17:51:54.279393Z",
+  "generated": "2024-03-04T14:38:14.484826Z",
   "generator": "pub",
   "generatorVersion": "3.2.3"
 }

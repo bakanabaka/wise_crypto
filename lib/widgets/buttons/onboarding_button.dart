@@ -6,6 +6,7 @@ class OnBoardingButton extends StatelessWidget {
     required this.onTap,
     required this.label,
   }) : super(key: key);
+
   final void Function() onTap;
   final String label;
 
@@ -19,9 +20,10 @@ class OnBoardingButton extends StatelessWidget {
           height: 50,
           width: 260,
           decoration: BoxDecoration(
-              color: Colors.greenAccent,
-              border: Border.all(color: Colors.green, width: 1.4),
-              borderRadius: BorderRadius.circular(10)),
+            color: Colors.greenAccent,
+            border: Border.all(color: Colors.green, width: 1.4),
+            borderRadius: BorderRadius.circular(10),
+          ),
           child: label == "Next"
               ? Padding(
                   padding: const EdgeInsets.only(left: 102, right: 20),
@@ -39,12 +41,7 @@ class OnBoardingButton extends StatelessWidget {
                     ],
                   ),
                 )
-              : const Center(
-                  child: Text(
-                    "Start trading",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                ),
+              : const SizedBox.shrink(), // Empty widget in the "else" case
         ),
       ),
     );
